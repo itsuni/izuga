@@ -7,10 +7,8 @@ package izuga;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -18,7 +16,8 @@ import javafx.scene.input.MouseEvent;
  * @author Gian
  */
 public class UIController implements Initializable {
-    
+
+    //Close on click on x
     @FXML
     private void handleClose(MouseEvent event) {
         System.exit(0);

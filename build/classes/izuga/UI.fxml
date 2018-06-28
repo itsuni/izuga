@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-text-inner-color: #f7f7f7; -fx-background-color: #f7f7f7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="izuga.UIController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #323643;">
+               <children>
+                  <Label prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #606470;" text="Izuga" textFill="#f7f7f7">
+                     <font>
+                        <Font name="Ebrima" size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="SEARCH" glyphStyle="-fx-fill:#606470" size="18.0" />
+                        <JFXTextField focusTraversable="false" labelFloat="true" promptText="Search" style="-fx-prompt-text-fill: #606470; -fx-prompt-inner-color: #f7f7f7;" unFocusColor="#606470">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="9.0" />
+                           </padding>
+                        </JFXTextField>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="BOOK" glyphStyle="-fx-fill:#606470" size="18.0" />
+                        <Label text="Library" textFill="#606470">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="185.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="HISTORY" glyphStyle="-fx-fill:#606470" size="18.0" />
+                        <Label text="History" textFill="#606470">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="GLOBE" glyphStyle="-fx-fill:#606470" size="18.0" />
+                        <Label text="Browse" textFill="#606470">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="DOWNLOAD" glyphStyle="-fx-fill:#606470" size="18.0" />
+                        <Label text="Downloads" textFill="#606470">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="COG" glyphStyle="-fx-fill:#606470" size="18.0" />
+                        <Label text="Settings" textFill="#606470">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #606470;">
+                     <children>
+                        <Circle fill="#606470" radius="20.0" stroke="#323643" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Circle>
+                        <Label text="Username" textFill="#f7f7f7">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="17.5" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="325.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="25.0" prefWidth="1280.0" style="-fx-background-color: #606470;">
+               <children>
+                  <JFXButton onMouseClicked="#handleClose" style="-fx-background-color: #323643;" text="X" textAlignment="CENTER" textFill="#f7f7f7">
+                     <font>
+                        <Font name="Microsoft Yi Baiti" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="1252.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="265.0" layoutY="110.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #606470;">
+         <children>
+            <Label prefHeight="100.0" prefWidth="754.0" style="-fx-background-color: #93deff;" text="Welcome to Izuga!" textFill="#f7f7f7">
+               <font>
+                  <Font name="Calibri Light" size="48.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Version: Pre Development Test" textFill="#f7f7f7">
+               <padding>
+                  <Insets left="10.0" top="80.0" />
+               </padding>
+            </Label>
+            <JFXButton layoutX="726.0" layoutY="1.0" text="X" textFill="#f7f7f7">
+               <font>
+                  <Font name="Microsoft Yi Baiti" size="14.0" />
+               </font>
+            </JFXButton>
+            <ScrollPane cache="true" layoutX="10.0" layoutY="110.0" mouseTransparent="true" prefHeight="345.0" prefWidth="734.0" style="-fx-background-color: #323643;">
+               <content>
+                  <JFXTextField alignment="TOP_LEFT" cache="true" editable="false" focusColor="#606470" prefHeight="345.0" prefWidth="719.0" style="-fx-background-color: #323643;" text="What to look forward to during the development of Izuga" unFocusColor="#606470">
+                     <font>
+                        <Font name="Calibri Light" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                  </JFXTextField>
+               </content>
+            </ScrollPane>
+            <JFXButton layoutX="663.0" layoutY="464.0" style="-fx-background-color: #93deff;" text="Let's Start!" textFill="#f7f7f7">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

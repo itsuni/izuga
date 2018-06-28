@@ -7,8 +7,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
@@ -30,123 +32,148 @@
                         <Insets left="10.0" />
                      </padding>
                   </Label>
-                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-                     <children>
-                        <FontAwesomeIconView glyphName="SEARCH" glyphStyle="-fx-fill:#606470" size="18.0" />
-                        <JFXTextField focusTraversable="false" labelFloat="true" promptText="Search" style="-fx-prompt-text-fill: #606470; -fx-prompt-inner-color: #f7f7f7;" unFocusColor="#606470">
-                           <font>
-                              <Font name="Calibri Light" size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets left="9.0" />
-                           </padding>
-                        </JFXTextField>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-                     <children>
-                        <FontAwesomeIconView glyphName="BOOK" glyphStyle="-fx-fill:#606470" size="18.0" />
-                        <Label text="Library" textFill="#606470">
-                           <font>
-                              <Font name="Calibri Light" size="14.0" />
-                           </font>
+                  <JFXButton text=" ">
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="SEARCH" glyphStyle="-fx-fill:#606470" size="18.0">
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <JFXTextField alignment="TOP_LEFT" focusTraversable="false" prefHeight="17.0" prefWidth="163.0" promptText="Search" style="-fx-prompt-text-fill: #606470; -fx-prompt-inner-color: #f7f7f7;" unFocusColor="#606470">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="8.0" />
+                                 </padding>
+                              </JFXTextField>
+                           </children>
                            <padding>
                               <Insets left="10.0" />
                            </padding>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="185.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-                     <children>
-                        <FontAwesomeIconView glyphName="HISTORY" glyphStyle="-fx-fill:#606470" size="18.0" />
-                        <Label text="History" textFill="#606470">
-                           <font>
-                              <Font name="Calibri Light" size="14.0" />
-                           </font>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_library" alignment="TOP_LEFT" layoutX="10.0" layoutY="171.0" onAction="#newButtonClick" prefHeight="45.0" prefWidth="200.0" text=" " textFill="#606470">
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleButtonAction" prefHeight="35.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="BOOK" glyphStyle="-fx-fill:#606470" size="18.0" />
+                              <Label text="Library" textFill="#606470">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
                            <padding>
                               <Insets left="10.0" />
                            </padding>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-                     <children>
-                        <FontAwesomeIconView glyphName="GLOBE" glyphStyle="-fx-fill:#606470" size="18.0" />
-                        <Label text="Browse" textFill="#606470">
-                           <font>
-                              <Font name="Calibri Light" size="14.0" />
-                           </font>
+                        </HBox>
+                     </graphic>
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_history" alignment="TOP_LEFT" onAction="#newButtonClick" prefHeight="45.0" prefWidth="200.0" text=" " textFill="#606470">
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleButtonAction" prefHeight="35.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="HISTORY" glyphStyle="-fx-fill:#606470" size="18.0" />
+                              <Label text="History" textFill="#606470">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="11.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
                            <padding>
                               <Insets left="10.0" />
                            </padding>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-                     <children>
-                        <FontAwesomeIconView glyphName="DOWNLOAD" glyphStyle="-fx-fill:#606470" size="18.0" />
-                        <Label text="Downloads" textFill="#606470">
-                           <font>
-                              <Font name="Calibri Light" size="14.0" />
-                           </font>
+                        </HBox>
+                     </graphic>
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_browse" alignment="TOP_LEFT" onAction="#newButtonClick" prefHeight="45.0" prefWidth="200.0" text=" " textFill="#606470">
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleButtonAction" prefHeight="35.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="GLOBE" glyphStyle="-fx-fill:#606470" size="18.0" />
+                              <Label text="Browse" textFill="#606470">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="11.0" />
+                                 </padding>
+                              </Label>
+                           </children>
                            <padding>
                               <Insets left="10.0" />
                            </padding>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-                     <children>
-                        <FontAwesomeIconView glyphName="COG" glyphStyle="-fx-fill:#606470" size="18.0" />
-                        <Label text="Settings" textFill="#606470">
-                           <font>
-                              <Font name="Calibri Light" size="14.0" />
-                           </font>
+                        </HBox>
+                     </graphic>
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_download" alignment="TOP_LEFT" onAction="#newButtonClick" prefHeight="45.0" prefWidth="200.0" text=" " textFill="#606470">
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleButtonAction" prefHeight="35.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="DOWNLOAD" glyphStyle="-fx-fill:#606470" size="18.0" />
+                              <Label text="Downloads" textFill="#606470">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
                            <padding>
                               <Insets left="10.0" />
                            </padding>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </HBox>
+                        </HBox>
+                     </graphic>
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_settings" alignment="TOP_LEFT" onAction="#newButtonClick" prefHeight="45.0" prefWidth="200.0" text=" " textFill="#606470">
+                     <graphic>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleButtonAction" prefHeight="35.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="COG" glyphStyle="-fx-fill:#606470" size="18.0" />
+                              <Label text="Settings" textFill="#606470">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                  </JFXButton>
                   <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #606470;">
                      <children>
                         <Circle fill="#606470" radius="20.0" stroke="#323643" strokeType="INSIDE">
@@ -167,7 +194,7 @@
                         </Label>
                      </children>
                      <VBox.margin>
-                        <Insets top="325.0" />
+                        <Insets top="327.0" />
                      </VBox.margin>
                   </HBox>
                </children>
@@ -184,6 +211,75 @@
                   </JFXButton>
                </children>
             </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="25.0" prefHeight="695.0" prefWidth="1080.0">
+         <children>
+            <Pane fx:id="pn_settings" prefHeight="695.0" prefWidth="1080.0" style="-fx-background-color: #f7f7f7;">
+               <children>
+                  <Label text="Settings" textFill="#606470">
+                     <font>
+                        <Font name="Calibri Light" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="55.0" prefWidth="1067.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pn_down" prefHeight="695.0" prefWidth="1080.0" style="-fx-background-color: #f7f7f7;">
+               <children>
+                  <Label text="Downloads" textFill="#606470">
+                     <font>
+                        <Font name="Calibri Light" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="55.0" prefWidth="1067.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pn_browse" prefHeight="695.0" prefWidth="1080.0" style="-fx-background-color: #f7f7f7;">
+               <children>
+                  <Label text="Browse" textFill="#606470">
+                     <font>
+                        <Font name="Calibri Light" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="55.0" prefWidth="1067.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pn_history" prefHeight="695.0" prefWidth="1080.0" style="-fx-background-color: #f7f7f7;">
+               <children>
+                  <Label text="History" textFill="#606470">
+                     <font>
+                        <Font name="Calibri Light" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="55.0" prefWidth="1067.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pn_library" prefHeight="695.0" prefWidth="1080.0" style="-fx-background-color: #f7f7f7;">
+               <children>
+                  <Label text="Library" textFill="#606470">
+                     <font>
+                        <Font name="Calibri Light" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="55.0" prefWidth="1067.0" />
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="pn_popup" layoutX="265.0" layoutY="110.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #606470;">

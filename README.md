@@ -9,3 +9,8 @@ Currently under beginning of development.  Don't expect much!
 * MAL and maybe possible other anime list connection
 * Simple and fast manga reader
 * Manga database browser
+
+# Roadmap
+* Functional UI ✓
+* Image Reader
+* Preferences
